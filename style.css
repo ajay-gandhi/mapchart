@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.Container {
+  max-width: 800px;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+}
+.Title {
+  margin: 15px 0 10px 0;
+  padding: 0 40px;
+}
+
+.AccordionSection {
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px 1px #ddd;
+}
+.AccordionSection--minimized {
+  height: 50px;
+}
+.AccordionSection__heading {
+  margin: 0;
+  padding: 10px 10px 15px 15px;
+  cursor: pointer;
+}
+.AccordionSection__AccordionContent {
+  padding: 10px;
+}

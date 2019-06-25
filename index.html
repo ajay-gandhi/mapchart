@@ -3,30 +3,42 @@
 <head>
   <title>MapChart</title>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-  <div>
-    <h3>Choose a map</h3>
-    <button class="selectMap" id="us"><img src="/assets/us.svg" height="100" width="auto" /></button>
-    <button class="selectMap" id="world"><img src="/assets/world.svg" height="100" width="auto" /></button>
-  </div>
-  <div>
-    <h3>Choose a color scheme</h3>
-    <button class="selectColor" id="red">red</button>
-    <button class="selectColor" id="blue">blue</button>
-    <button class="selectColor" id="green">green</button>
-    <button class="selectColor" id="regenerate" disabled>Regenerate</button>
-    <button class="selectColor" id="uploaded" disabled>I'll upload my own</button>
-  </div>
-  <div>
-    <h3>Upload your data</h3>
-    <input type="file" class="selectFile" />
-  </div>
-  <div>
-    <h3>See your chart</h3>
-    <button class="makeMap">Make it</button>
-    <div class="mapResult"></div>
+  <div class="Container">
+    <h1 class="Title">MapChart</h1>
+    <div class="AccordionSection" id="choose-map">
+      <h2 class="AccordionSection__heading">Choose a map</h2>
+      <div class="AccordionSection__AccordionContent">
+        <img src="/assets/us.svg" height="100" width="auto" class="AccordionContent__selectMap" id="us" />
+        <img src="/assets/world.svg" height="100" width="auto" class="AccordionContent__selectMap" id="world" />
+      </div>
+    </div>
+    <div class="AccordionSection AccordionSection--minimized" id="choose-color">
+      <h2 class="AccordionSection__heading">Choose a color scheme</h2>
+      <div class="AccordionSection__AccordionContent">
+        <button class="AccordionContent__selectColor colorGradient" id="red">Red</button>
+        <button class="AccordionContent__selectColor colorGradient" id="blue">Blue</button>
+        <button class="AccordionContent__selectColor colorGradient" id="green">Green</button>
+        <button class="AccordionContent__selectColor" id="uploaded" disabled>I'll upload my own</button>
+      </div>
+    </div>
+    <div class="AccordionSection AccordionSection--minimized" id="upload-data">
+      <h2 class="AccordionSection__heading">Upload your data</h2>
+      <div class="AccordionSection__AccordionContent">
+        <input type="file" class="AccordionContent__selectFile" />
+      </div>
+    </div>
+    <div class="AccordionSection AccordionSection--minimized" id="see-chart">
+      <h2 class="AccordionSection__heading">See your chart</h2>
+      <div class="AccordionSection__AccordionContent">
+        <button class="AccordionContent__makeMap">Make it</button>
+        <div class="AccordionContent__mapResult"></div>
+      </div>
+    </div>
   </div>
   <script src="main.js"></script>
+  <script src="accordion.js"></script>
 </body>
 </html>
