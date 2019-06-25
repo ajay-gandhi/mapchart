@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MapChart</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+  <div>
+    <h3>Choose a map</h3>
+    <button class="selectMap" id="us"><img src="/assets/us.svg" height="100" width="auto" /></button>
+    <button class="selectMap" id="world"><img src="/assets/world.svg" height="100" width="auto" /></button>
+  </div>
+  <div>
+    <h3>Choose a color scheme</h3>
+    <button class="selectColor" id="red">red</button>
+    <button class="selectColor" id="blue">blue</button>
+    <button class="selectColor" id="green">green</button>
+    <button class="selectColor" id="regenerate" disabled>Regenerate</button>
+    <button class="selectColor" id="uploaded" disabled>I'll upload my own</button>
+  </div>
+  <div>
+    <h3>Upload your data</h3>
+    <input type="file" class="selectFile" />
+  </div>
+  <div>
+    <h3>See your chart</h3>
+    <button class="makeMap">Make it</button>
+    <div class="mapResult"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
